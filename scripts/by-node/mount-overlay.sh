@@ -18,13 +18,20 @@ cd /opt/dcos-setup
 source ./env.sh
 
 mkfs -t xfs -n ftype=1 ${OVERLAYFS} 
-mkdir /mnt/mesos
+mkdir /var/lib/docker
 mount -t xfs ${OVERLAYFS} /mnt/mesos/
 xfs_info ${OVERLAYFS} | grep ftype
 
 # NOTE: Need to change the tee syntex so that I can use the OVERLAYFS env variable instead of hard coading /dev/vdb
 tee /etc/fstab << '__EOF__'
-/dev/vdb /mnt/mesos xfs defaults 1 2
+/dev/vdb	/var/lib/docker 	xfs	defaults	0	2
+__EOF__
+
+
+tee /etc/docker/daemon.json << '__EOF__'
+{
+  "storage-driver": "overlay"
+}
 __EOF__
 
 df -h
