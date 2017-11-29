@@ -84,4 +84,11 @@ export BOOT_NODE_PORT
 SSHPWD='antsle'
 export SSHPWD
 
+# Device that can be mounted as an OverlayFS for Docker
+# See the following link that talks about Recommendations and how OverlayFS avoids known issues with
+# devicemapper in loop-lvm mode and allows containers to use docker-in-docker if they want.
+#
+# If you do not have a device that can be mapped, then comment go into the script node-base.sh and
+# comment out the lines at the end of the file that make the file system and mount it.
 
+OVERLAYFS=/dev/vdb
