@@ -1,3 +1,6 @@
+# This script needs a lot of work.  For now it does what I need it to do. echo $ returns 0 for each ping when
+# the service is back up
+
 source ../config/env.sh
 
 echo "Checking Master Node 1"
