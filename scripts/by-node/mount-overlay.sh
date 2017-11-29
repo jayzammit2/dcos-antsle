@@ -12,11 +12,17 @@
 # NOTE: Comment out if you do not have a device to make an overlay filesystem on and mount.  If
 # you do, set the OVERLAYFS variable in env.sh.  The default is set to /dev/vdb
 
-mkfs -t xfs -n ftype=1 /dev/vdb 
-mkdir /mnt/mesos
-mount -t xfs /dev/vdb /mnt/mesos/
-xfs_info /dev/vdb | grep ftype
+mkdir -p /opt/dcos-setup
+mv ~/env.sh /opt/dcos-setup
+cd /opt/dcos-setup
+source ./env.sh
 
+mkfs -t xfs -n ftype=1 ${OVERLAYFS} 
+mkdir /mnt/mesos
+mount -t xfs ${OVERLAYFS} /mnt/mesos/
+xfs_info ${OVERLAYFS} | grep ftype
+
+# NOTE: Need to change the tee syntex so that I can use the OVERLAYFS env variable instead of hard coading /dev/vdb
 tee /etc/fstab << '__EOF__'
 /dev/vdb /mnt/mesos xfs defaults 1 2
 __EOF__
