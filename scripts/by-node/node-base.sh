@@ -60,7 +60,6 @@ yum install -y tar ipset unzip wget curl xz ntp
 
 # ------ END DATA COMPRESSION INSTALL & SETUP ------
 
-
 # ------ NTP INSTALL & SETUP ------
 
 # Network Time Protocol (NTP) must be enabled on all nodes for clock synchronization. By default, during DC/OS startup 
@@ -110,6 +109,4 @@ docker pull nginx
 
 systemctl stop firewalld  
 systemctl disable firewalld
-
-
 
