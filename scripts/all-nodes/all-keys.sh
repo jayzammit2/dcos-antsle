@@ -5,7 +5,6 @@ tee -a /etc/ssh/ssh_config << '__EOF__'
 StrictHostKeyChecking no
 __EOF__
 
-
 ssh-keygen -f $HOME/.ssh/id_rsa -t rsa -N ''
 
 sshpass -p ${SSHPWD} ssh-copy-id ${MASTER1_NODE_IP} 
