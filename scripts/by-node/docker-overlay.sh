@@ -13,7 +13,7 @@ __EOF__
 
 # ------ MOUNT OVERLAY FILE SYSTEM ------
 #
-# NOTE: Comment out if you do not have an device to make an overlay filesystem on and mount.  If
+# NOTE: Comment out if you do not have a device to make an overlay filesystem on and mount.  If
 # you do, set the OVERLAYFS variable in env.sh.  The default is set to /dev/vdb
 
 mkfs -t xfs -n ftype=1 ${OVERLATFS}
