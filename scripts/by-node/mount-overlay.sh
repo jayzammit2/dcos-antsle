@@ -28,13 +28,17 @@ tee /etc/fstab << '__EOF__'
 __EOF__
 
 # Set Runtime directory and storage driver
-mkdir -p /etc/docker
-touch /etc/docker/daemon.json
-tee /etc/docker/daemon.json << '__EOF__'
-{
-  "storage-driver": "overlay"
-}
-__EOF__
+# I have this commented out because various docker parameters are already set in the node-base.sh script. You will see a line
+# where override.conf is set with ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://.  If yo modify this line
+# and prefer to set this in daemon.json, you are free to do so
+
+# mkdir -p /etc/docker
+# touch /etc/docker/daemon.json
+# tee /etc/docker/daemon.json << '__EOF__'
+# {
+#   "storage-driver": "overlay"
+# }
+# __EOF__
 
 df -h
 

@@ -20,7 +20,7 @@ __EOF__
 mkdir -p /etc/systemd/system/docker.service.d && tee /etc/systemd/system/docker.service.d/override.conf << '__EOF__'
 [Service]
 ExecStart=
-ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
+ExecStart=/usr/bin/docker daemon --storage-driver=overlay --selinux-enabled=false -H fd://
 __EOF__
 
 yum install -y docker-engine-1.11.2
