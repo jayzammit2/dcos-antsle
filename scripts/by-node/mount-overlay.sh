@@ -7,16 +7,14 @@
 #
 # https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.2_release_notes/technology-preview-file_systems
 
-source ../config/env.sh
-
 # ------ MOUNT OVERLAY FILE SYSTEM ------
 #
 # NOTE: Comment out if you do not have a device to make an overlay filesystem on and mount.  If
 # you do, set the OVERLAYFS variable in env.sh.  The default is set to /dev/vdb
 
-mkfs -t xfs -n ftype=1 ${OVERLATFS}
+mkfs -t xfs -n ftype=1 /dev/vdb 
 mkdir /mnt/mesos
-mount -t xfs ${OVERLATFS} /mnt/mesos/
+mount -t xfs /dev/vdb /mnt/mesos/
 xfs_info /dev/vdb | grep ftype
 
 tee /etc/fstab << '__EOF__'
