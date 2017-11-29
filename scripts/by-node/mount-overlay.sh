@@ -14,20 +14,17 @@
 # NOTE: Comment out if you do not have a device to make an overlay filesystem on and mount.  If
 # you do, set the OVERLAYFS variable in env.sh.  The default is set to /dev/vdb
 
-mkdir -p /opt/dcos-setup
-mv ~/env.sh /opt/dcos-setup
-cd /opt/dcos-setup
-source ./env.sh
+# source ./env.sh
 
-mkfs -t xfs -n ftype=1 ${OVERLAYFS} 
-mkdir /var/lib/docker
-mount -t xfs ${OVERLAYFS} /var/lib/docker
-xfs_info ${OVERLAYFS} | grep ftype
+# mkfs -t xfs -n ftype=1 ${OVERLAYFS} 
+# mkdir /var/lib/docker
+# mount -t xfs ${OVERLAYFS} /var/lib/docker
+# xfs_info ${OVERLAYFS} | grep ftype
 
 # NOTE: Need to change the tee syntex so that I can use the OVERLAYFS env variable instead of hard coading /dev/vdb
-tee /etc/fstab << '__EOF__'
-/dev/vdb	/var/lib/docker 	xfs	defaults	0	2
-__EOF__
+# tee /etc/fstab << '__EOF__'
+# /dev/vdb	/var/lib/docker 	xfs	defaults	0	2
+# __EOF__
 
 # Set Runtime directory and storage driver
 # I have this commented out because various docker parameters are already set in the node-base.sh script. You will see a line
@@ -42,7 +39,7 @@ __EOF__
 # }
 # __EOF__
 
-df -h
+# df -h
 
 # ------ END MOUNT OVERLAY FILE SYSTEM ------
 
