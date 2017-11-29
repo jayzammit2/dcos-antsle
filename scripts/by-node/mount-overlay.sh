@@ -9,10 +9,6 @@
 
 source ../config/env.sh
 
-tee /etc/modules-load.d/overlay.conf << '__EOF__'
-overlay
-__EOF__
-
 # ------ MOUNT OVERLAY FILE SYSTEM ------
 #
 # NOTE: Comment out if you do not have a device to make an overlay filesystem on and mount.  If
