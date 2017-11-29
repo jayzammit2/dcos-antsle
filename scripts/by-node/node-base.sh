@@ -4,6 +4,8 @@
 # https://dcos.io/docs/1.8/administration/installing/custom/system-requirements/
 #
 
+source ../config/env.sh
+
 # ------ BEGIN DOCKER INSTALL & SETUP ------
 
 # Docker must be installed on all bootstrap and cluster nodes.
