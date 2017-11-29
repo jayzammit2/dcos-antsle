@@ -112,3 +112,5 @@ docker pull nginx
 systemctl stop firewalld  
 systemctl disable firewalld
 
+systemctl disable dnsmasq 
+systemctl stop dnsmasq
