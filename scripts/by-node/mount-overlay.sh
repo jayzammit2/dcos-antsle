@@ -27,7 +27,7 @@ tee /etc/fstab << '__EOF__'
 /dev/vdb	/var/lib/docker 	xfs	defaults	0	2
 __EOF__
 
-
+# Set Runtime directory and storage driver
 tee /etc/docker/daemon.json << '__EOF__'
 {
   "storage-driver": "overlay"
