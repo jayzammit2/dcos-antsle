@@ -19,7 +19,7 @@ source ./env.sh
 
 mkfs -t xfs -n ftype=1 ${OVERLAYFS} 
 mkdir /var/lib/docker
-mount -t xfs ${OVERLAYFS} /mnt/mesos/
+mount -t xfs ${OVERLAYFS} /var/lib/docker
 xfs_info ${OVERLAYFS} | grep ftype
 
 # NOTE: Need to change the tee syntex so that I can use the OVERLAYFS env variable instead of hard coading /dev/vdb
