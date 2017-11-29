@@ -28,6 +28,8 @@ tee /etc/fstab << '__EOF__'
 __EOF__
 
 # Set Runtime directory and storage driver
+mkdir -p /etc/docker
+touch /etc/docker/daemon.json
 tee /etc/docker/daemon.json << '__EOF__'
 {
   "storage-driver": "overlay"
