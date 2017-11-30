@@ -1,10 +1,28 @@
+# The DC/OS Boot node is not part of the overall cluster.  However, it is required for the advanced
+# installaion,
+#
+# The advanced installation guide can be found at the following link
+#
+# https://dcos.io/docs/1.7/administration/installing/custom/advanced/
+
+source ../config/env.sh
+
 mkdir -p /opt/dcos-setup
 cd /opt/dcos-setup
 
-curl -O https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh
+curl -O https://dcos.io/releases/${DCOS_VERSION}/dcos_generate_config.sh
+# curl -O https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh
  
 mkdir -p genconf
  
+# Create an ip-detect script.
+#
+# In this step, you create an IP detect script to broadcast the IP address of each node 
+# across the cluster. Each node in a DC/OS cluster has a unique IP address that is 
+# used to communicate between nodes in the cluster. The IP detect script prints the
+# unique IPv4 address of a node to STDOUT each time DC/OS is started on the node.
+
+
 cat > genconf/ip-detect << '__EOF__'
 #!/usr/bin/env bash
 set -o nounset -o errexit
@@ -45,10 +63,23 @@ ssh_port: '22'
 ssh_user: root
 __EOF__
 
+# Copy the ssh keys that each node will use to securly interact with each other to the genconf config directory.
+# See advanced installation documentation
+
 cp $HOME/.ssh/id_rsa genconf/ssh-key
 
 chmod +x dcos_generate_config.sh
+
+# Run the DC/OS installer shell script to generate a customized DC/OS build file. 
+# The setup script extracts a Docker container that uses the generic DC/OS install 
+# files to create customized DC/OS build files for your cluster. The build files are 
+# output to ./genconf/serve/
+
 bash dcos_generate_config.sh
+
+# From your home directory, run this command to host the DC/OS install package
+# through an NGINX Docker container. For <your-port>, specify the port value 
+# that is used in the bootstrap_url.
 
 docker pull nginx
 docker run -d --restart=unless-stopped -p 9000:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx

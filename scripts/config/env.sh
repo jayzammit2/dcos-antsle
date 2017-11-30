@@ -14,6 +14,10 @@
 #
 # See https://dcos.io/docs/1.9/overview/architecture/node-types/
 
+# ------ SET DCOS INSTALL VERSION ------
+
+DCOS_VERSION=1.10.2
+
 # ------ MASTER NODE IPs -------
 
 MASTER1_NODE_IP=10.1.1.11
