@@ -88,8 +88,8 @@ export BOOT_NODE_PORT
 #
 # NOTE: The password 'antsle' is a dummy password and should be changed to reflect your environment
 
-SSHPWD='antsle'
-export SSHPWD
+NODEPW='antsle'
+export NODEPW
 
 # Device that can be mounted as an OverlayFS for Docker
 # See the following link that talks about Recommendations and how OverlayFS avoids known issues with
