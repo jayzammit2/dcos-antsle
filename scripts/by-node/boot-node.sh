@@ -82,7 +82,7 @@ bash dcos_generate_config.sh
 # that is used in the bootstrap_url.
 
 docker pull nginx
-docker run -d --restart=unless-stopped -p 9000:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
+docker run -d --restart=unless-stopped -p ${BOOT_NODE_PORT}:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
 docker ps
 
 
