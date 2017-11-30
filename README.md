@@ -4,4 +4,9 @@ Setup Mesosphere DC/OS Open Source Cluster (See https://mesosphere.com for infor
 # Install Instruction
 
 ssh into DC/OS boot node
+
 yum install -y git
+
+yum install -y tree
+
+

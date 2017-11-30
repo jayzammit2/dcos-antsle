@@ -56,7 +56,7 @@ fi
 # You must have the UnZip, GNU tar, and XZ Utils data compression utilities installed on your cluster nodes.
 
 yum install -y epel-release
-yum install -y tar ipset unzip wget curl xz ntp
+yum install -y tar ipset unzip wget curl xz ntp tree
 
 # ------ END DATA COMPRESSION INSTALL & SETUP ------
 
