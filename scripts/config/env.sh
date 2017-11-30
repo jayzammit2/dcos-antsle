@@ -5,13 +5,14 @@
 # 2 Public Agent Nodes
 # 3 Private Agent Nodes
 #
-# You are free to set this up however you like.
+# Set each Node IP to fit your environment. You can also add additional Nodes as well to fit your
+# environment. If you do, the various install scripts would need to be modified to include the additions.
 # 
 # NOTE: Set the IP's to whatever you like based on your network requirements.
 #
 # For a definition of DC/OS Node types, see
 #
-# # See https://dcos.io/docs/1.9/overview/architecture/node-types/
+# See https://dcos.io/docs/1.9/overview/architecture/node-types/
 
 # ------ MASTER NODE IPs -------
 
@@ -80,6 +81,8 @@ export BOOT_NODE_PORT
 #
 # If you do not want to use this, that is ok as well. Modify the setup-key.sh script and simply answer each
 # prompt to log in.
+#
+# NOTE: The password 'antsle' is a dummy password and should be changed to reflect your environment
 
 SSHPWD='antsle'
 export SSHPWD
