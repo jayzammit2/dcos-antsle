@@ -50,7 +50,7 @@ public_agent_list:
 master_list:
 - 10.1.1.11
 bootstrap_url: 'http://10.1.1.10:9000'
-cluster_name: 'antsle.dcos'
+cluster_name: 'dcos.cluster'
 log_directory: genconf/logs
 exhibitor_storage_backend: static
 master_discovery: static
