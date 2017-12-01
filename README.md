@@ -13,9 +13,9 @@ cd dcos-setup/scripts/all-nodes
 
 ./all-keys.sh
 
-./all-node-base.sh
-
 ./all-overlay.sh 
+
+./all-node-base.sh
 
 ./all-reboot.sh 
 
