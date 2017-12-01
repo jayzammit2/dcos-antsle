@@ -11,6 +11,8 @@ yum install -y git tree
 
 cd dcos-setup/scripts/all-nodes
 
+./all-keys.sh
+
 ./all-nodes.sh
 
 ./all-overlay.sh 
