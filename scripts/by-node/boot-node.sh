@@ -10,8 +10,7 @@ source ../config/env.sh
 mkdir -p /opt/dcos-setup
 cd /opt/dcos-setup
 
-curl -O https://dcos.io/releases/${DCOS_VERSION}/dcos_generate_config.sh
-# curl -O https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh
+curl -O https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh
  
 mkdir -p genconf
  
