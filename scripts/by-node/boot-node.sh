@@ -39,7 +39,9 @@ chmod 755 genconf/ip-detect
 ./genconf/ip-detect
  
 rm -f genconf/config.yaml
-echo "agent_list:" > genconf/config.yaml
+rm -f genconf/config.yaml
+echo "---" > genconf/config.yaml
+echo "agent_list:" >> genconf/config.yaml
 echo "-" ${PRIVATE_AGENT1_NODE_IP} >> genconf/config.yaml
 echo "-" ${PRIVATE_AGENT2_NODE_IP} >> genconf/config.yaml
 echo "-" ${PRIVATE_AGENT3_NODE_IP} >> genconf/config.yaml
@@ -48,18 +50,18 @@ echo "-" ${PUBLIC_AGENT1_NODE_IP} >> genconf/config.yaml
 echo "-" ${PUBLIC_AGENT1_NODE_IP} >> genconf/config.yaml
 echo "master_list:" >> genconf/config.yaml
 echo "-" ${MASTER1_NODE_IP} >> genconf/config.yaml
-echo "bootstrap_url: http://" ${BOOT_NODE_IP}:${BOOT_NODE_PORT} >> genconf/config.yaml
+echo "bootstrap_url: http://"${BOOT_NODE_IP}:${BOOT_NODE_PORT} >> genconf/config.yaml
 echo "cluster_name: dcos.cluster" >> genconf/config.yaml
- echo "log_directory: genconf/logs" >> genconf/config.yaml
- echo "exhibitor_storage_backend: static" >> genconf/config.yaml
- echo "master_discovery: static" >> genconf/config.yaml
- echo "process_timeout: 10000" >> genconf/config.yaml
- echo "resolvers:" >> genconf/config.yaml
- echo "-" ${DNS1} >> genconf/config.yaml
- echo "-" ${DNS2} >> genconf/config.yaml
- echo "ssh_key_path: genconf/ssh-key" >> genconf/config.yaml
- echo "ssh_port: 22" >> genconf/config.yaml
- echo "ssh_user:" ${SSH_USER} >> genconf/config.yaml
+echo "log_directory: genconf/logs" >> genconf/config.yaml
+echo "exhibitor_storage_backend: static" >> genconf/config.yaml
+echo "master_discovery: static" >> genconf/config.yaml
+echo "process_timeout: 10000" >> genconf/config.yaml
+echo "resolvers:" >> genconf/config.yaml
+echo "-" ${DNS1} >> genconf/config.yaml
+echo "-" ${DNS2} >> genconf/config.yaml
+echo "ssh_key_path: genconf/ssh-key" >> genconf/config.yaml
+echo "ssh_port: 22" >> genconf/config.yaml
+echo "ssh_user:" ${SSH_USER} >> genconf/config.yaml
 
 # Copy the ssh keys that each node will use to securly interact with each other to the genconf config directory.
 # See advanced installation documentation
