@@ -23,7 +23,6 @@ DCOS_VERSION=1.10.2
 DCOS_CLUSTER_NAME=my.dcos.cluster
 export DCOS_CLUSTER_NAME
 
-
 # ------ MASTER NODE IPs -------
 
 MASTER1_NODE_IP=10.1.1.11
@@ -105,7 +104,6 @@ export DNS1
 
 DNS2=8.8.4.4
 export DNS2
-
 
 # Device that can be mounted as an OverlayFS for Docker
 # See the following link that talks about Recommendations and how OverlayFS avoids known issues with
