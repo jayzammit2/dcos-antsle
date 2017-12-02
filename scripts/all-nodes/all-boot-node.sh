@@ -1,1 +1,1 @@
-../by-node/boot-node.sh &
+../by-node/boot-node.sh 
