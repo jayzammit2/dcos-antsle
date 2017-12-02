@@ -1,3 +1,4 @@
-./all-nodes/all-keys.sh
-./all-nodes/all-overlay.sh
+cd all-nodes
+./all-keys.sh
+./all-overlay.sh
 ./all-reboot.sh
