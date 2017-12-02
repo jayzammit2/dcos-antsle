@@ -16,7 +16,7 @@
 
 # ------ SET DCOS INSTALL VERSION ------
 
-DCOS_VERSION=1.10.2
+DCOS_VERSION=1.10
 
 # ------ SET DCOS CLUSTER NAME  ------
 
