@@ -36,9 +36,7 @@ chmod 755 genconf/ip-detect
 ###   to get a working script, must work consistently on each & every node
 
 ./genconf/ip-detect
- 
-rm -f genconf/config.yaml
-rm -f genconf/config.yaml
+
 echo "---" > genconf/config.yaml
 echo "agent_list:" >> genconf/config.yaml
 echo "-" ${PRIVATE_AGENT1_NODE_IP} >> genconf/config.yaml
