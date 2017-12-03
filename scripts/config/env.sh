@@ -93,10 +93,10 @@ export BOOT_NODE_PORT
 #
 # NOTE: The password 'antsle' is a dummy password and should be changed to reflect your environment
 
-NODEPW=<PUT YOUR PASSWORD HERE>
+NODEPW=antsle
 export NODEPW
 
-SSH_USER=<PUT YOUR SSH USER HERE>
+SSH_USER=root
 export SSH_USER
 
 DNS1=8.8.8.8
