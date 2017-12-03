@@ -29,10 +29,6 @@ yum install -y docker-engine-1.11.2
 
 usermod -aG docker root
 
-tee /etc/sudoers << '__EOF__'
-nobody        ALL=(ALL)       NOPASSWD: /usr/bin/docker
-__EOF__
-
 # start the docker service and configure it to start at boot time.
 
 systemctl start docker
