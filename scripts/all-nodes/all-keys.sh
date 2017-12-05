@@ -71,8 +71,8 @@ scp ../config/env.sh ${PUBLIC_AGENT2_NODE_IP}:~/env.sh
 scp ../config/env.sh ${PRIVATE_AGENT1_NODE_IP}:~/env.sh
 scp ../config/env.sh ${PRIVATE_AGENT2_NODE_IP}:~/env.sh
 scp ../config/env.sh ${PRIVATE_AGENT3_NODE_IP}:~/env.sh
-# scp ../config/env.sh ${PRIVATE_AGENT4_NODE_IP}:~/env.sh
-# scp ../config/env.sh ${PRIVATE_AGENT5_NODE_IP}:~/env.sh
-# scp ../config/env.sh ${PRIVATE_AGENT6_NODE_IP}:~/env.sh
-# scp ../config/env.sh ${PRIVATE_AGENT7_NODE_IP}:~/env.sh
+scp ../config/env.sh ${PRIVATE_AGENT4_NODE_IP}:~/env.sh
+scp ../config/env.sh ${PRIVATE_AGENT5_NODE_IP}:~/env.sh
+scp ../config/env.sh ${PRIVATE_AGENT6_NODE_IP}:~/env.sh
+scp ../config/env.sh ${PRIVATE_AGENT7_NODE_IP}:~/env.sh
 
