@@ -1,7 +1,8 @@
 # dcos-setup
 Setup Mesosphere DC/OS Open Source Cluster (See https://mesosphere.com for information on DC/OS)
 
-# Install Instructions (TBD - Plan is to complete documentation over the next couple weeks)
+# Install Instructions
+# Plan is to complete documentation over the next couple weeks
 
 ./step1.sh
 
