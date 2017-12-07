@@ -3,7 +3,9 @@ Setup Mesosphere DC/OS Open Source Cluster (See https://mesosphere.com for infor
 
 # Install Instruction
 
-# NOTE: It is very important that each step be done in the order listed
+# It is important that each step be done in the order listed
+
+Note: My plan is to document this much more completely when I can set aside some time.
 
 ./step1.sh
 
