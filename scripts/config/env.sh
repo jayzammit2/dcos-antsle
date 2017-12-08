@@ -7,7 +7,7 @@
 #
 # Set each Node IP to fit your environment. You can also add additional Nodes as well to fit your
 # environment. If you do, the various install scripts would need to be modified to include the additions.
-# 
+#
 # NOTE: Set the IP's to whatever you like based on your network requirements.
 #
 # For a definition of DC/OS Node types, see
@@ -15,6 +15,7 @@
 # See https://dcos.io/docs/1.9/overview/architecture/node-types/
 
 # ------ SET DCOS INSTALL VERSION ------
+
 
 DCOS_VERSION=1.10
 
@@ -25,7 +26,7 @@ export DCOS_CLUSTER_NAME
 
 # ------ MASTER NODE IPs -------
 
-MASTER1_NODE_IP=10.0.0.
+MASTER1_NODE_IP=10.1.1.11
 export MASTER1_NODE_IP
 
 # MASTER2_NODE_IP=<YOUR IP>
@@ -36,10 +37,10 @@ export MASTER1_NODE_IP
 
 # ------ PUBLIC AGENT NODE IPs -------
 
-PUBLIC_AGENT1_NODE_IP=10.0.0.
+PUBLIC_AGENT1_NODE_IP=10.1.1.12
 export PUBLIC_AGENT1_NODE_IP
 
-PUBLIC_AGENT2_NODE_IP=10.0.0.
+PUBLIC_AGENT2_NODE_IP=10.1.1.13
 export PUBLIC_AGENT2_NODE_IP
 
 # PUBLIC_AGENT3_NODE_IP=<YOUR IP>
@@ -53,13 +54,13 @@ export PUBLIC_AGENT2_NODE_IP
 
 # ------ PRIVATE AGENT NODE IPs -------
 
-PRIVATE_AGENT1_NODE_IP=10.0.0.
+PRIVATE_AGENT1_NODE_IP=10.1.1.14
 export PRIVATE_AGENT1_NODE_IP
 
-PRIVATE_AGENT2_NODE_IP=10.0.0.
+PRIVATE_AGENT2_NODE_IP=10.1.1.15
 export PRIVATE_AGENT2_NODE_IP
 
-PRIVATE_AGENT3_NODE_IP=10.0.0.
+PRIVATE_AGENT3_NODE_IP=10.1.1.16
 export PRIVATE_AGENT3_NODE_IP
 
 PRIVATE_AGENT4_NODE_IP=<YOUR IP>
@@ -76,7 +77,7 @@ export PRIVATE_AGENT5_NODE_IP
 
 # ------ BOOT NODE IPs & PORT -------
 
-BOOT_NODE_IP=10.0.0.
+BOOT_NODE_IP=10.1.1.10
 export BOOT_NODE_IP
 
 BOOT_NODE_PORT=9000
@@ -93,7 +94,7 @@ export BOOT_NODE_PORT
 #
 # NOTE: The password 'antsle' is a dummy password and should be changed to reflect your environment
 
-NODEPW=start123@
+NODEPW=antsle
 export NODEPW
 
 SSH_USER=root
