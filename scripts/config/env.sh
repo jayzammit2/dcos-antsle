@@ -7,7 +7,7 @@
 #
 # Set each Node IP to fit your environment. You can also add additional Nodes as well to fit your
 # environment. If you do, the various install scripts would need to be modified to include the additions.
-# 
+#
 # NOTE: Set the IP's to whatever you like based on your network requirements.
 #
 # For a definition of DC/OS Node types, see
@@ -105,4 +105,3 @@ export DNS1
 
 DNS2=8.8.4.4
 export DNS2
-
