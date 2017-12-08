@@ -62,9 +62,9 @@ scp ../config/env.sh ${MASTER1_NODE_IP}:~/env.sh
 
 scp ../config/env.sh ${PUBLIC_AGENT1_NODE_IP}:~/env.sh
 scp ../config/env.sh ${PUBLIC_AGENT2_NODE_IP}:~/env.sh
-# scp ../config/env.sh ${PUBLIC_AGENT3_NODE_IP}:~/env.sh
-# scp ../config/env.sh ${PUBLIC_AGENT4_NODE_IP}:~/env.sh
-# scp ../config/env.sh ${PUBLIC_AGENT5_NODE_IP}:~/env.sh
+scp ../config/env.sh ${PUBLIC_AGENT3_NODE_IP}:~/env.sh
+scp ../config/env.sh ${PUBLIC_AGENT4_NODE_IP}:~/env.sh
+scp ../config/env.sh ${PUBLIC_AGENT5_NODE_IP}:~/env.sh
 
 # Copy env.sh script to Private Agent Nodes
 
