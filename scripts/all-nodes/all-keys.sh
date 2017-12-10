@@ -19,6 +19,9 @@ __EOF__
 # Generate ssh key that will be used by all DC/OS cluster nodes to be able to securly communicate with each other
 ssh-keygen -f $HOME/.ssh/id_rsa -t rsa -N ''
 
+# Copy ssh key to Boot Node
+sshpass -p ${NODEPW} ssh-copy-id ${BOOT_NODE_IP} 
+
 # Copy ssh key to Master Nodes
 
 sshpass -p ${NODEPW} ssh-copy-id ${MASTER1_NODE_IP} 
