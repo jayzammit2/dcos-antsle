@@ -19,6 +19,9 @@ __EOF__
 # Generate ssh key that will be used by all DC/OS cluster nodes to be able to securly communicate with each other
 ssh-keygen -f $HOME/.ssh/id_rsa -t rsa -N ''
 
+# Copy ssh key to Boot Node
+sshpass -p ${NODEPW} ssh-copy-id ${BOOT_NODE_IP} 
+
 # Copy ssh key to Master Nodes
 
 sshpass -p ${NODEPW} ssh-copy-id ${MASTER1_NODE_IP} 
@@ -28,7 +31,7 @@ sshpass -p ${NODEPW} ssh-copy-id ${MASTER1_NODE_IP}
 # Copy ssh key to Public Agent Nodes
 
 sshpass -p ${NODEPW} ssh-copy-id ${PUBLIC_AGENT1_NODE_IP} 
-sshpass -p ${NODEPW} ssh-copy-id ${PUBLIC_AGENT2_NODE_IP} 
+# sshpass -p ${NODEPW} ssh-copy-id ${PUBLIC_AGENT2_NODE_IP} 
 # sshpass -p ${NODEPW} ssh-copy-id ${PUBLIC_AGENT3_NODE_IP} 
 # sshpass -p ${NODEPW} ssh-copy-id ${PUBLIC_AGENT4_NODE_IP} 
 # sshpass -p ${NODEPW} ssh-copy-id ${PUBLIC_AGENT5_NODE_IP} 
@@ -38,8 +41,8 @@ sshpass -p ${NODEPW} ssh-copy-id ${PUBLIC_AGENT2_NODE_IP}
 sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT1_NODE_IP} 
 sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT2_NODE_IP} 
 sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT3_NODE_IP} 
-sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT4_NODE_IP} 
-sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT5_NODE_IP} 
+# sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT4_NODE_IP} 
+# sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT5_NODE_IP} 
 # sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT6_NODE_IP} 
 # sshpass -p ${NODEPW} ssh-copy-id ${PRIVATE_AGENT7_NODE_IP} 
 
@@ -61,7 +64,7 @@ scp ../config/env.sh ${MASTER1_NODE_IP}:~/env.sh
 # Copy env.sh script to Public Agent Nodes
 
 scp ../config/env.sh ${PUBLIC_AGENT1_NODE_IP}:~/env.sh
-scp ../config/env.sh ${PUBLIC_AGENT2_NODE_IP}:~/env.sh
+# scp ../config/env.sh ${PUBLIC_AGENT2_NODE_IP}:~/env.sh
 # scp ../config/env.sh ${PUBLIC_AGENT3_NODE_IP}:~/env.sh
 # scp ../config/env.sh ${PUBLIC_AGENT4_NODE_IP}:~/env.sh
 # scp ../config/env.sh ${PUBLIC_AGENT5_NODE_IP}:~/env.sh
@@ -71,8 +74,8 @@ scp ../config/env.sh ${PUBLIC_AGENT2_NODE_IP}:~/env.sh
 scp ../config/env.sh ${PRIVATE_AGENT1_NODE_IP}:~/env.sh
 scp ../config/env.sh ${PRIVATE_AGENT2_NODE_IP}:~/env.sh
 scp ../config/env.sh ${PRIVATE_AGENT3_NODE_IP}:~/env.sh
-scp ../config/env.sh ${PRIVATE_AGENT4_NODE_IP}:~/env.sh
-scp ../config/env.sh ${PRIVATE_AGENT5_NODE_IP}:~/env.sh
+# scp ../config/env.sh ${PRIVATE_AGENT4_NODE_IP}:~/env.sh
+# scp ../config/env.sh ${PRIVATE_AGENT5_NODE_IP}:~/env.sh
 # scp ../config/env.sh ${PRIVATE_AGENT6_NODE_IP}:~/env.sh
 # scp ../config/env.sh ${PRIVATE_AGENT7_NODE_IP}:~/env.sh
 
